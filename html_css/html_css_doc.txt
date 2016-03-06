@@ -1,0 +1,759 @@
+# HTML comments:
+With html start a comment with <!-- and end a comment with -->
+
+<!--
+<h1>Hello World</h1>
+
+<h2>CatPhotoApp</h2>
+
+<p>Hello Paragraph</p>
+-->
+
+# Below is how an html source page looks like:
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+
+
+</body>
+</html>
+-->
+
+<h2 style="color:red">CatPhotoApp</h2>
+
+<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+
+# With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page.
+# When you entered <h2 style="color: red">CatPhotoApp</h2>, you were giving that individual h2 element an inline style.
+
+# That's one way to add style to an element, but a better way is by using CSS, which stands for Cascading Style Sheets.
+# At the top of your code, create a style element like this:
+<style>
+</style>
+
+# Inside that style element, you can create a CSS selector for all h2 elements.
+# For example, if you wanted all h2 elements to be red, your style element would look like this:
+
+<style>
+  h2 {color:blue;}
+  h1 {color:red;}
+</style>
+
+
+
+# Note that it's important to have both opening and closing curly braces ({ and }) around each element's style.
+# You also need to make sure your element's style is between the opening and closing style tags.
+# Finally, be sure to add the semicolon to the end of each of your element's styles.
+
+
+# Use a CSS Class to Style an Element
+# Classes are reusable styles that can be added to HTML elements.
+
+# Here's an example CSS class declaration:
+
+    <style>
+      .blue-text {
+        color: blue;
+      }
+    </style>
+
+
+# You can see that we've created a CSS class called blue-text within the <style> tag.
+# You can apply a class to an HTML element like this:
+
+<h2 class="blue-text">CatPhotoApp</h2>
+
+# Note that in your CSS style element, classes should start with a period.
+# In your HTML elements' class declarations, classes shouldn't start with a period.
+
+<!--
+<style>
+  .red-text {
+    color: red;
+  }
+</style>
+
+<h2 class=red-text>CatPhotoApp</h2>
+
+<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+-->
+
+
+# Style Multiple Elements with a CSS Class
+# Remember that you can attach classes to HTML elements by using class="your-class-here" within the relevant
+# element's opening tag.
+
+# Remember that CSS class selectors require a period at the beginning like this:
+
+    .blue-text {
+      color: blue;
+    }
+
+# But also remember that class declarations don't use a period, like this:
+<h2 class="blue-text">CatPhotoApp</h2>
+
+# Now lets apply the style class: red-text to the html p element
+<p class='red-text'>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack
+your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+
+
+# Change the Font Size of an Element:
+# Font size is controlled by the font-size CSS property, like this:
+h1 {
+font-size: 30px;
+}
+
+<style>
+  .red-text {
+    color: red;
+  }
+  p{
+    font-size: 16px;
+  }
+</style>
+
+
+# Example usage:
+<!--
+<style>
+  .red-text {
+    color: red;
+  }
+
+  p {
+    font-size: 16px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere
+  shed everywhere stretching attack your ankles chase the red
+  dot, hairball run catnip eat the grass sniff.</p>
+<p>Purr jump eat the grass rip the couch scratched sunbathe,
+  shed everywhere rip the couch sleep in the sink fluffy fur
+  catnip scratched.</p>
+-->
+
+
+# Set the Font Family of an Element:
+# You can set an element's font by using the font-family property.
+
+# For example, if you wanted to set your h2 element's font to Sans-serif, you would use the following CSS:
+h2 {
+  font-family: Sans-serif;
+}
+
+# To make all of your p elements to use the Monospace font:
+# Within your <style></style> tag do:
+<style>
+  .red-text {
+    color: red;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+</style>
+
+# Importing a Google Font:
+# First, you'll need to make a call to Google to grab the Lobster font and load it into your HTML.
+# Copy the following code snippet and paste it into the top of your code editor:
+
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+# Alternatively, you can go to http://fonts.googleapis.com/css?family=Lobster on your browser and copy the given css:
+
+<!--
+/* cyrillic */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), local('Lobster-Regular'), url(http://fonts.gstatic.com/s/lobster/v16/c28rH3kclCLEuIsGhOg7evY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), local('Lobster-Regular'), url(http://fonts.gstatic.com/s/lobster/v16/RdfS2KomDWXvet4_dZQehvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), local('Lobster-Regular'), url(http://fonts.gstatic.com/s/lobster/v16/9NqNYV_LP7zlAF8jHr7f1vY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), local('Lobster-Regular'), url(http://fonts.gstatic.com/s/lobster/v16/cycBf3mfbGkh66G5NhszPQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+-->
+
+# Now you can set Lobster as a font-family value on your h2 element.
+
+<!--
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+-->
+
+
+# Specifying How Fonts Should Degrade:
+# There are several default fonts that are available in all browsers. These include Monospace, Serif and Sans-Serif
+# When one font isn't available, you can tell the browser to "degrade" to another font.
+
+# For example, if you wanted an element to use the Helvetica font,
+# but also degrade to the Sans-Serif font when Helvetica wasn't available, you could use this CSS style:
+
+p {
+  font-family: Helvetica, Sans-Serif;
+}
+
+
+# Add Images to your Website:
+# You can add images to your website by using the img element,
+# and point to a specific image's URL using the src attribute
+
+# An example of this would be:
+<img src="http://www.your-image-source.com/your-image.jpg">
+
+# Note that in most cases, img elements are self-closing.
+# Try it with this image:
+https://bit.ly/fcc-relaxing-cat
+
+
+<!--
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<img src=https://bit.ly/fcc-relaxing-cat>
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe,
+shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+-->
+
+# Size your Images:
+# CSS has a property called width that controls an element's width.
+# Just like with fonts, we'll use px (pixels) to specify the image's width.
+
+# For example, if we wanted to create a CSS class called larger-image that gave HTML elements
+# a width of 500 pixels, we'd use:
+
+    <style>
+      .larger-image {
+        width: 500px;
+      }
+    </style>
+
+# Exercise: create a class called smaller-image and use it to resize the image so that it's only 100 pixels wide.
+
+<style>
+.smaller-image {
+width: 100px;
+}
+</style>
+
+# Your img element should have the class smaller-image.
+<!--
+
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+
+  .smaller-image {
+    width: 100px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<img class='smaller-image' src="https://bit.ly/fcc-relaxing-cat">
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere
+stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe,
+shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+-->
+
+# Add Borders Around your Elements:
+# CSS borders have properties like style, color and width:
+
+# For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:
+
+    <style>
+      .thin-red-border {
+        border-color: red;
+        border-width: 5px;
+        border-style: solid;
+      }
+    </style>
+
+# Now lets create class called thick-green-border that puts a 10-pixel-wide green border with a style of solid
+# around an HTML element, and apply that class to your cat photo.
+# Remember that you can apply multiple classes to an element by separating each
+# class with a space within its class attribute. For example:
+# <img class="class1 class2">
+
+<!--
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+  }
+
+  .smaller-image {
+    width: 100px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat">
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip
+the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+-->
+
+# Adding Rounded Corners with a Border Radius:
+
+# Your cat photo currently has sharp corners. We can round out those corners with a CSS property called border-radius.
+# You can specify a border-radius with pixels. Give your cat photo a border-radius of 10px.
+
+# Note: this waypoint allows for multiple possible solutions.
+# For example, you may add border-radius to either the .thick-green-border class or .smaller-image class.
+
+<!--
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+
+  .smaller-image {
+    width: 100px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat">
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere
+stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe,
+shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+-->
+
+# Make Circular Images with a Border Radius:
+# In addition to pixels, you can also specify a border-radius using a percentage.
+# Give your cat photo a border-radius of 50%.
+<style>
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+</style>
+
+# Link to External Pages with Anchor Elements <a>:
+# <a> elements, also known as anchor elements, are used to link to content outside of the current page.
+
+# Here's an example:
+<p>Here's a <a href="http://freecodecamp.com"> link to Free Code Camp</a> for you to follow.</p>
+
+# Create an a element that links to http://freecatphotoapp.com and has "cat photos" as its anchor text.
+
+<a href="http://freecatphotoapp.com" > cat photos </a>
+
+# Nest an Anchor Element within a Paragraph
+# Here's an example:
+<p>Here's a <a href="http://freecodecamp.com"> link to Free Code Camp</a> for you to follow.</p>
+
+<!--
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  .smaller-image {
+    width: 100px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p>View more  <a href="http://www.freecatphotoapp.com">cat photos</a> </p>
+
+<img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat">
+
+<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere
+stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe,
+shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+-->
+
+# Make Dead Links using the Hash Symbol
+# Sometimes you want to add a elements to your website before you know where they will link.
+# This is also handy when you're changing the behavior of a link using jQuery.
+
+# Replace the value of your a element's href attribute with a #, also known as a hash symbol,
+# to turn it into a dead link.
+<p>Click here for <a href=#>cat photos</a>.</p>
+
+
+# Turn an Image into a Link
+# You can make elements into links by nesting them within an a element.
+# Nest your image within an a element. Here's an example:
+<a href="#"><img src="http://bit.ly/fcc-running-cats"></a>
+
+# Remember to use # as your a element's href property in order to turn it into a dead link.
+# Once you've done this, hover over your image with your cursor.
+# Your cursor's normal pointer should become the link clicking pointer. The photo is now a link.
+
+<a href="#" > <img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat"></a>
+
+
+# Add Alt Text to an Image for Accessibility
+# alt attributes, also known as alt text, are what browsers will display if they fail to load the image.
+# alt attributes are also important for blind or visually impaired users to understand what an image portrays.
+# And search engines also look at alt attributes.
+
+# In short, every image should have an alt attribute!
+# You can add an alt attribute right in the img element like this:
+
+<img src="www.your-image-source.com/your-image.jpg" alt="your alt text">
+
+# Exercise: Add an alt attribute with the text A cute orange cat lying on its back to our cat photo:
+
+<a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat"
+alt="A cute orange cat lying on its back to our cat photo"></a>
+
+# Create a Bulleted Unordered List:
+# HTML has a special element for creating unordered lists, or bullet point-style lists.
+# Unordered lists start with a <ul> element. Then they contain some number of <li> elements.
+
+# For example:
+    <ul>
+      <li>milk</li>
+      <li>cheese</li>
+    </ul>
+# would create a bullet point-style list of "milk" and "cheese".
+
+<!--
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  .smaller-image {
+    width: 100px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<p>Click here for <a href="#">cat photos</a>.</p>
+
+<a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back" src="https://bit.ly/fcc-relaxing-cat"></a>
+
+<ul>
+  <li>Milk</li>
+  <li>Cheese</li>
+  <li>Rat</li>
+</ul>
+-->
+
+# Create an Ordered List
+# HTML has a special element for creating ordered lists, or numbered-style lists.
+# Ordered lists start with a <ol> element. Then they contain some number of <li> elements.
+# For example:
+    <ol>
+      <li>Garfield</li>
+      <li>Sylvester</li>
+    </ol>
+
+<!--
+<p>Things cats love:</p>
+<ul>
+  <li>cat nip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ul>
+<p>Top 3 things cats hate:</p>
+<ol>
+  <li>Major</li>
+  <li>Kanu</li>
+  <li>Okeke</li>
+</ol>
+-->
+
+# Create a Text Field
+# Now let's create a web form.
+# Text inputs are a convenient way to get input from your user.
+# You can create one like this:
+
+<input type="text">
+
+# Note that input elements are self-closing.
+# Create an input element of type text below your lists.
+
+<input type='Text' >
+
+# Add Placeholder Text to a Text Field
+# Your placeholder text is what appears in your text input before your user has input anything.
+# You can create placeholder text like so:
+
+<input type="text" placeholder="this is placeholder text">
+
+# Example:
+
+<input type="text" placeholder='Cat photo URL'>
+
+
+# Create a Form Element
+# You can build web forms that actually submit data to a server using nothing more than pure HTML.
+# You can do this by specifying an action on your form element.
+
+# For example:
+
+<form action="/url-where-you-want-to-submit-form-data"></form>
+
+# Exercise: Nest your text field in a form element. Add the action="/submit-cat-photo" attribute to this form element.
+
+<form action="/submit-cat-photo">
+<input type="text" placeholder="cat photo URL">
+</form>
+
+# Add a Submit Button to a Form:
+# Let's add a submit button to your form.
+# Clicking this button will send the data from your form to the URL you specified with your form's action attribute.
+# Here's an example submit button:
+
+<button type="submit">this button submits the form</button>
+
+# Add a submit button to your form element with type submit and "Submit" as its text.
+
+<form action="/submit-cat-photo">
+<input type="text" placeholder="cat photo URL">
+<button type="submit">Submit</button>
+</form>
+
+
+# Use HTML5 to Require a Field
+# You can require specific form fields so that your user will not be able to submit your form
+# until he or she has filled them out.
+# For example, if you wanted to make a text input field required,
+# you can just add the word required within your input element, you would use:
+
+<input type="text" required>
+
+# Make your text input a required field, so that your user can't submit the form without completing this field.
+
+# Then try to submit the form without inputing any text.
+# See how your HTML5 form notifies you that the field is required?
+
+# Note: This field does not work in Safari.
+
+<form action="/submit-cat-photo">
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+
+# Create a Set of Radio Buttons
+# You can use radio buttons for questions where you want the user to only give you one answer.
+# Radio buttons are a type of input
+# Each of your radio buttons should be nested within its own label element.
+
+# All related radio buttons should have the same name attribute.
+# Here's an example of a radio button:
+
+<label><input type="radio" name="indoor-outdoor"> Indoor</label>
+
+# Exercise:
+# a). Your page should have two radio button elements.
+# b). Give your radio buttons the name attribute of indoor-outdoor.
+# c). Each of your two radio button elements should be nested in its own label element.
+# d). Make sure each of your label elements has a closing tag.
+# e). One of your radio buttons should have the label indoor.
+# f). One of your radio buttons should have the label outdoor.
+
+<form action="/submit-cat-photo">
+  <label><input type='radio' name='indoor-outdoor'>Indoor</label>
+  <label><input type='radio' name='indoor-outdoor'>Outdoor</label>
+  <input type="text" placeholder="cat photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
